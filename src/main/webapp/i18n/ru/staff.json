@@ -1,0 +1,26 @@
+{
+  "teacherSubjectApp": {
+    "staff": {
+      "home": {
+        "title": "Staff",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Staff",
+        "createOrEditLabel": "Создать или отредактировать Staff",
+        "notFound": "Staff не найдено"
+      },
+      "created": "Новый Staff создан с идентификатором {{ param }}",
+      "updated": "Staff обновлен с идентификатором {{ param }}",
+      "deleted": "Staff удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Staff {{ id }}?"
+      },
+      "detail": {
+        "title": "Staff"
+      },
+      "id": "ID",
+      "name": "Name",
+      "fromHours": "From Hours",
+      "toHours": "To Hours"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20230629080100",
+  "dto": "mapstruct",
+  "entityTableName": "teacher",
+  "fields": [
+    {
+      "fieldName": "fullnName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rank",
+      "fieldType": "AcademicRank",
+      "fieldValues": "INTERN,ASSISTANT,HEAD_TEACHER,DOTSENT,PROFESSOR,HEAD_DEPARTMENT"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Teacher",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "staff",
+      "relationshipName": "staff",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "spec",
+      "relationshipName": "spec",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,24 @@
+{
+  "teacherSubjectApp": {
+    "spec": {
+      "home": {
+        "title": "Specs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Spec qo`shish",
+        "createOrEditLabel": "Specni tahrirlash",
+        "notFound": "No Specs found"
+      },
+      "created": "Spec {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Spec saqlandi",
+      "deleted": "{{ param }}- Spec o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Specni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Spec"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

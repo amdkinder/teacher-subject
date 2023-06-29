@@ -1,0 +1,27 @@
+{
+  "teacherSubjectApp": {
+    "teacher": {
+      "home": {
+        "title": "Teachers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Teacher qo`shish",
+        "createOrEditLabel": "Teacherni tahrirlash",
+        "notFound": "No Teachers found"
+      },
+      "created": "Teacher {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Teacher saqlandi",
+      "deleted": "{{ param }}- Teacher o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Teacherni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Teacher"
+      },
+      "id": "ID",
+      "fullnName": "Fulln Name",
+      "rank": "Rank",
+      "staff": "Staff",
+      "spec": "Spec"
+    }
+  }
+}

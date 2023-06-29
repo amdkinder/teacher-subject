@@ -1,0 +1,25 @@
+{
+  "teacherSubjectApp": {
+    "teacherSubject": {
+      "home": {
+        "title": "Teacher Subjects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Teacher Subject",
+        "createOrEditLabel": "Create or edit a Teacher Subject",
+        "notFound": "No Teacher Subjects found"
+      },
+      "created": "A new Teacher Subject is created with identifier {{ param }}",
+      "updated": "A Teacher Subject is updated with identifier {{ param }}",
+      "deleted": "A Teacher Subject is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Teacher Subject {{ id }}?"
+      },
+      "detail": {
+        "title": "Teacher Subject"
+      },
+      "id": "ID",
+      "teacher": "Teacher",
+      "subject": "Subject"
+    }
+  }
+}

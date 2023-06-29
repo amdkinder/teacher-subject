@@ -1,0 +1,13 @@
+{
+  "teacherSubjectApp": {
+    "AcademicRank": {
+      "null": "",
+      "INTERN": "INTERN",
+      "ASSISTANT": "ASSISTANT",
+      "HEAD_TEACHER": "HEAD_TEACHER",
+      "DOTSENT": "DOTSENT",
+      "PROFESSOR": "PROFESSOR",
+      "HEAD_DEPARTMENT": "HEAD_DEPARTMENT"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "teacherSubjectApp": {
+    "teacherSubject": {
+      "home": {
+        "title": "Teacher Subjects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Teacher Subject qo`shish",
+        "createOrEditLabel": "Teacher Subjectni tahrirlash",
+        "notFound": "No Teacher Subjects found"
+      },
+      "created": "Teacher Subject {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Teacher Subject saqlandi",
+      "deleted": "{{ param }}- Teacher Subject o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Teacher Subjectni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Teacher Subject"
+      },
+      "id": "ID",
+      "teacher": "Teacher",
+      "subject": "Subject"
+    }
+  }
+}

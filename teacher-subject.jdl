@@ -1,0 +1,43 @@
+
+
+entity Teacher {
+    fullnName String
+    rank AcademicRank
+}
+
+entity Subject {
+    name String
+    hours Integer
+    inUse Boolean
+}
+
+entity Spec {
+    name String
+}
+
+enum AcademicRank {
+    INTERN, ASSISTANT, HEAD_TEACHER, DOTSENT, PROFESSOR, HEAD_DEPARTMENT
+}
+
+entity Staff {
+    name String
+    fromHours Integer
+    toHours Integer
+}
+
+entity TeacherSubject {
+
+}
+
+relationship ManyToOne {
+    Teacher {staff} to Staff
+    Teacher {spec} to Spec
+    Subject {spec} to Spec
+    TeacherSubject {teacher} to Teacher
+    TeacherSubject {subject} to Subject
+}
+
+dto * with mapstruct
+filter Teacher, Subject, Staff, Spec, TeacherSubject
+service * with serviceClass
+paginate * with pagination

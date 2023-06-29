@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20230629080101",
+  "dto": "mapstruct",
+  "entityTableName": "staff",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fromHours",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "toHours",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Staff",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

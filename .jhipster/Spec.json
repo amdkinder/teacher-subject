@@ -1,0 +1,18 @@
+{
+  "applications": "*",
+  "changelogDate": "20230629080059",
+  "dto": "mapstruct",
+  "entityTableName": "spec",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Spec",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

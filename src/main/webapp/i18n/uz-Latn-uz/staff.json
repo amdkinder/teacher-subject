@@ -1,0 +1,26 @@
+{
+  "teacherSubjectApp": {
+    "staff": {
+      "home": {
+        "title": "Staff",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Staff qo`shish",
+        "createOrEditLabel": "Staffni tahrirlash",
+        "notFound": "No Staff found"
+      },
+      "created": "Staff {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Staff saqlandi",
+      "deleted": "{{ param }}- Staff o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Staffni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Staff"
+      },
+      "id": "ID",
+      "name": "Name",
+      "fromHours": "From Hours",
+      "toHours": "To Hours"
+    }
+  }
+}

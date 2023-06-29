@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230629080103",
+  "dto": "mapstruct",
+  "entityTableName": "subject",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hours",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "inUse",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Subject",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "spec",
+      "relationshipName": "spec",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

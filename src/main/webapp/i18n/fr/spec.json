@@ -1,0 +1,24 @@
+{
+  "teacherSubjectApp": {
+    "spec": {
+      "home": {
+        "title": "Specs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Spec",
+        "createOrEditLabel": "Créer ou éditer un Spec",
+        "notFound": "Aucun Spec trouvé"
+      },
+      "created": "Un nouveau Spec a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Spec avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Spec avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Spec {{ id }} ?"
+      },
+      "detail": {
+        "title": "Spec"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

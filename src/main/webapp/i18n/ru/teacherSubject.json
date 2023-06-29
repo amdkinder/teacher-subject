@@ -1,0 +1,25 @@
+{
+  "teacherSubjectApp": {
+    "teacherSubject": {
+      "home": {
+        "title": "Teacher Subjects",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Teacher Subject",
+        "createOrEditLabel": "Создать или отредактировать Teacher Subject",
+        "notFound": "Teacher Subjects не найдено"
+      },
+      "created": "Новый Teacher Subject создан с идентификатором {{ param }}",
+      "updated": "Teacher Subject обновлен с идентификатором {{ param }}",
+      "deleted": "Teacher Subject удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Teacher Subject {{ id }}?"
+      },
+      "detail": {
+        "title": "Teacher Subject"
+      },
+      "id": "ID",
+      "teacher": "Teacher",
+      "subject": "Subject"
+    }
+  }
+}

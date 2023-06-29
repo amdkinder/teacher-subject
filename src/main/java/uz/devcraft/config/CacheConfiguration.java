@@ -48,6 +48,11 @@ public class CacheConfiguration {
             createCache(cm, uz.devcraft.domain.User.class.getName());
             createCache(cm, uz.devcraft.domain.Authority.class.getName());
             createCache(cm, uz.devcraft.domain.User.class.getName() + ".authorities");
+            createCache(cm, uz.devcraft.domain.Spec.class.getName());
+            createCache(cm, uz.devcraft.domain.Teacher.class.getName());
+            createCache(cm, uz.devcraft.domain.Staff.class.getName());
+            createCache(cm, uz.devcraft.domain.TeacherSubject.class.getName());
+            createCache(cm, uz.devcraft.domain.Subject.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="teacherSubject">
+      <h2 data-cy="teacherSubjectDetailsHeading">
+        <span jhiTranslate="teacherSubjectApp.teacherSubject.detail.title">Teacher Subject</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ teacherSubject.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="teacherSubjectApp.teacherSubject.teacher">Teacher</span></dt>
+        <dd>
+          <div *ngIf="teacherSubject.teacher">
+            <a [routerLink]="['/teacher', teacherSubject.teacher.id, 'view']">{{ teacherSubject.teacher.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="teacherSubjectApp.teacherSubject.subject">Subject</span></dt>
+        <dd>
+          <div *ngIf="teacherSubject.subject">
+            <a [routerLink]="['/subject', teacherSubject.subject.id, 'view']">{{ teacherSubject.subject.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/teacher-subject', teacherSubject.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

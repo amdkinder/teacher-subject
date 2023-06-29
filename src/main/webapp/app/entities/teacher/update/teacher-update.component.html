@@ -1,0 +1,65 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-teacher-heading" data-cy="TeacherCreateUpdateHeading" jhiTranslate="teacherSubjectApp.teacher.home.createOrEditLabel">
+        Create or edit a Teacher
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="teacherSubjectApp.teacher.fullnName" for="field_fullnName">Fulln Name</label>
+          <input type="text" class="form-control" name="fullnName" id="field_fullnName" data-cy="fullnName" formControlName="fullnName" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="teacherSubjectApp.teacher.rank" for="field_rank">Rank</label>
+          <select class="form-control" name="rank" formControlName="rank" id="field_rank" data-cy="rank">
+            <option [ngValue]="null">{{ 'teacherSubjectApp.AcademicRank.null' | translate }}</option>
+            <option *ngFor="let academicRank of academicRankValues" [value]="academicRank">
+              {{ 'teacherSubjectApp.AcademicRank.' + academicRank | translate }}
+            </option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="teacherSubjectApp.teacher.staff" for="field_staff">Staff</label>
+          <select class="form-control" id="field_staff" data-cy="staff" name="staff" formControlName="staff" [compareWith]="compareStaff">
+            <option [ngValue]="null"></option>
+            <option [ngValue]="staffOption" *ngFor="let staffOption of staffSharedCollection">{{ staffOption.id }}</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="teacherSubjectApp.teacher.spec" for="field_spec">Spec</label>
+          <select class="form-control" id="field_spec" data-cy="spec" name="spec" formControlName="spec" [compareWith]="compareSpec">
+            <option [ngValue]="null"></option>
+            <option [ngValue]="specOption" *ngFor="let specOption of specsSharedCollection">{{ specOption.id }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

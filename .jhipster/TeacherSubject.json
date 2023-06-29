@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20230629080102",
+  "dto": "mapstruct",
+  "entityTableName": "teacher_subject",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "name": "TeacherSubject",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "teacher",
+      "relationshipName": "teacher",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "subject",
+      "relationshipName": "subject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}
