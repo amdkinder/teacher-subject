@@ -206,9 +206,6 @@ public class TeacherSubjectResource {
             .build();
     }
 
-    @GetMapping("/teacher-subjects/hours-by-teacher/{id}")
-    public ResponseEntity<?> getSumHoursByTeacher(@PathVariable("id") Long teacherId) {
-        var result = teacherSubjectService.calculateTeacherHours(teacherId);
-        return ResponseEntity.ok(RestResult.Companion.success(teacherId));
-    }
+
+
 }

@@ -90,8 +90,8 @@ public class TeacherQueryService extends QueryService<Teacher> {
             if (criteria.getId() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getId(), Teacher_.id));
             }
-            if (criteria.getFullnName() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getFullnName(), Teacher_.fullnName));
+            if (criteria.getFullName() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getFullName(), Teacher_.fullName));
             }
             if (criteria.getRank() != null) {
                 specification = specification.and(buildSpecification(criteria.getRank(), Teacher_.rank));

@@ -35,8 +35,8 @@ import uz.devcraft.service.mapper.TeacherMapper;
 @WithMockUser
 class TeacherResourceIT {
 
-    private static final String DEFAULT_FULLN_NAME = "AAAAAAAAAA";
-    private static final String UPDATED_FULLN_NAME = "BBBBBBBBBB";
+    private static final String DEFAULT_FULL_NAME = "AAAAAAAAAA";
+    private static final String UPDATED_FULL_NAME = "BBBBBBBBBB";
 
     private static final AcademicRank DEFAULT_RANK = AcademicRank.INTERN;
     private static final AcademicRank UPDATED_RANK = AcademicRank.ASSISTANT;
@@ -68,7 +68,7 @@ class TeacherResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Teacher createEntity(EntityManager em) {
-        Teacher teacher = new Teacher().fullnName(DEFAULT_FULLN_NAME).rank(DEFAULT_RANK);
+        Teacher teacher = new Teacher().fullName(DEFAULT_FULL_NAME).rank(DEFAULT_RANK);
         return teacher;
     }
 
@@ -79,7 +79,7 @@ class TeacherResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Teacher createUpdatedEntity(EntityManager em) {
-        Teacher teacher = new Teacher().fullnName(UPDATED_FULLN_NAME).rank(UPDATED_RANK);
+        Teacher teacher = new Teacher().fullName(UPDATED_FULL_NAME).rank(UPDATED_RANK);
         return teacher;
     }
 
@@ -102,7 +102,7 @@ class TeacherResourceIT {
         List<Teacher> teacherList = teacherRepository.findAll();
         assertThat(teacherList).hasSize(databaseSizeBeforeCreate + 1);
         Teacher testTeacher = teacherList.get(teacherList.size() - 1);
-        assertThat(testTeacher.getFullnName()).isEqualTo(DEFAULT_FULLN_NAME);
+        assertThat(testTeacher.getFullName()).isEqualTo(DEFAULT_FULL_NAME);
         assertThat(testTeacher.getRank()).isEqualTo(DEFAULT_RANK);
     }
 
@@ -137,7 +137,7 @@ class TeacherResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(teacher.getId().intValue())))
-            .andExpect(jsonPath("$.[*].fullnName").value(hasItem(DEFAULT_FULLN_NAME)))
+            .andExpect(jsonPath("$.[*].fullName").value(hasItem(DEFAULT_FULL_NAME)))
             .andExpect(jsonPath("$.[*].rank").value(hasItem(DEFAULT_RANK.toString())));
     }
 
@@ -153,7 +153,7 @@ class TeacherResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(teacher.getId().intValue()))
-            .andExpect(jsonPath("$.fullnName").value(DEFAULT_FULLN_NAME))
+            .andExpect(jsonPath("$.fullName").value(DEFAULT_FULL_NAME))
             .andExpect(jsonPath("$.rank").value(DEFAULT_RANK.toString()));
     }
 
@@ -177,67 +177,67 @@ class TeacherResourceIT {
 
     @Test
     @Transactional
-    void getAllTeachersByFullnNameIsEqualToSomething() throws Exception {
+    void getAllTeachersByFullNameIsEqualToSomething() throws Exception {
         // Initialize the database
         teacherRepository.saveAndFlush(teacher);
 
-        // Get all the teacherList where fullnName equals to DEFAULT_FULLN_NAME
-        defaultTeacherShouldBeFound("fullnName.equals=" + DEFAULT_FULLN_NAME);
+        // Get all the teacherList where fullName equals to DEFAULT_FULL_NAME
+        defaultTeacherShouldBeFound("fullName.equals=" + DEFAULT_FULL_NAME);
 
-        // Get all the teacherList where fullnName equals to UPDATED_FULLN_NAME
-        defaultTeacherShouldNotBeFound("fullnName.equals=" + UPDATED_FULLN_NAME);
+        // Get all the teacherList where fullName equals to UPDATED_FULL_NAME
+        defaultTeacherShouldNotBeFound("fullName.equals=" + UPDATED_FULL_NAME);
     }
 
     @Test
     @Transactional
-    void getAllTeachersByFullnNameIsInShouldWork() throws Exception {
+    void getAllTeachersByFullNameIsInShouldWork() throws Exception {
         // Initialize the database
         teacherRepository.saveAndFlush(teacher);
 
-        // Get all the teacherList where fullnName in DEFAULT_FULLN_NAME or UPDATED_FULLN_NAME
-        defaultTeacherShouldBeFound("fullnName.in=" + DEFAULT_FULLN_NAME + "," + UPDATED_FULLN_NAME);
+        // Get all the teacherList where fullName in DEFAULT_FULL_NAME or UPDATED_FULL_NAME
+        defaultTeacherShouldBeFound("fullName.in=" + DEFAULT_FULL_NAME + "," + UPDATED_FULL_NAME);
 
-        // Get all the teacherList where fullnName equals to UPDATED_FULLN_NAME
-        defaultTeacherShouldNotBeFound("fullnName.in=" + UPDATED_FULLN_NAME);
+        // Get all the teacherList where fullName equals to UPDATED_FULL_NAME
+        defaultTeacherShouldNotBeFound("fullName.in=" + UPDATED_FULL_NAME);
     }
 
     @Test
     @Transactional
-    void getAllTeachersByFullnNameIsNullOrNotNull() throws Exception {
+    void getAllTeachersByFullNameIsNullOrNotNull() throws Exception {
         // Initialize the database
         teacherRepository.saveAndFlush(teacher);
 
-        // Get all the teacherList where fullnName is not null
-        defaultTeacherShouldBeFound("fullnName.specified=true");
+        // Get all the teacherList where fullName is not null
+        defaultTeacherShouldBeFound("fullName.specified=true");
 
-        // Get all the teacherList where fullnName is null
-        defaultTeacherShouldNotBeFound("fullnName.specified=false");
+        // Get all the teacherList where fullName is null
+        defaultTeacherShouldNotBeFound("fullName.specified=false");
     }
 
     @Test
     @Transactional
-    void getAllTeachersByFullnNameContainsSomething() throws Exception {
+    void getAllTeachersByFullNameContainsSomething() throws Exception {
         // Initialize the database
         teacherRepository.saveAndFlush(teacher);
 
-        // Get all the teacherList where fullnName contains DEFAULT_FULLN_NAME
-        defaultTeacherShouldBeFound("fullnName.contains=" + DEFAULT_FULLN_NAME);
+        // Get all the teacherList where fullName contains DEFAULT_FULL_NAME
+        defaultTeacherShouldBeFound("fullName.contains=" + DEFAULT_FULL_NAME);
 
-        // Get all the teacherList where fullnName contains UPDATED_FULLN_NAME
-        defaultTeacherShouldNotBeFound("fullnName.contains=" + UPDATED_FULLN_NAME);
+        // Get all the teacherList where fullName contains UPDATED_FULL_NAME
+        defaultTeacherShouldNotBeFound("fullName.contains=" + UPDATED_FULL_NAME);
     }
 
     @Test
     @Transactional
-    void getAllTeachersByFullnNameNotContainsSomething() throws Exception {
+    void getAllTeachersByFullNameNotContainsSomething() throws Exception {
         // Initialize the database
         teacherRepository.saveAndFlush(teacher);
 
-        // Get all the teacherList where fullnName does not contain DEFAULT_FULLN_NAME
-        defaultTeacherShouldNotBeFound("fullnName.doesNotContain=" + DEFAULT_FULLN_NAME);
+        // Get all the teacherList where fullName does not contain DEFAULT_FULL_NAME
+        defaultTeacherShouldNotBeFound("fullName.doesNotContain=" + DEFAULT_FULL_NAME);
 
-        // Get all the teacherList where fullnName does not contain UPDATED_FULLN_NAME
-        defaultTeacherShouldBeFound("fullnName.doesNotContain=" + UPDATED_FULLN_NAME);
+        // Get all the teacherList where fullName does not contain UPDATED_FULL_NAME
+        defaultTeacherShouldBeFound("fullName.doesNotContain=" + UPDATED_FULL_NAME);
     }
 
     @Test
@@ -332,7 +332,7 @@ class TeacherResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(teacher.getId().intValue())))
-            .andExpect(jsonPath("$.[*].fullnName").value(hasItem(DEFAULT_FULLN_NAME)))
+            .andExpect(jsonPath("$.[*].fullName").value(hasItem(DEFAULT_FULL_NAME)))
             .andExpect(jsonPath("$.[*].rank").value(hasItem(DEFAULT_RANK.toString())));
 
         // Check, that the count call also returns 1
@@ -381,7 +381,7 @@ class TeacherResourceIT {
         Teacher updatedTeacher = teacherRepository.findById(teacher.getId()).get();
         // Disconnect from session so that the updates on updatedTeacher are not directly saved in db
         em.detach(updatedTeacher);
-        updatedTeacher.fullnName(UPDATED_FULLN_NAME).rank(UPDATED_RANK);
+        updatedTeacher.fullName(UPDATED_FULL_NAME).rank(UPDATED_RANK);
         TeacherDTO teacherDTO = teacherMapper.toDto(updatedTeacher);
 
         restTeacherMockMvc
@@ -396,7 +396,7 @@ class TeacherResourceIT {
         List<Teacher> teacherList = teacherRepository.findAll();
         assertThat(teacherList).hasSize(databaseSizeBeforeUpdate);
         Teacher testTeacher = teacherList.get(teacherList.size() - 1);
-        assertThat(testTeacher.getFullnName()).isEqualTo(UPDATED_FULLN_NAME);
+        assertThat(testTeacher.getFullName()).isEqualTo(UPDATED_FULL_NAME);
         assertThat(testTeacher.getRank()).isEqualTo(UPDATED_RANK);
     }
 
@@ -489,7 +489,7 @@ class TeacherResourceIT {
         List<Teacher> teacherList = teacherRepository.findAll();
         assertThat(teacherList).hasSize(databaseSizeBeforeUpdate);
         Teacher testTeacher = teacherList.get(teacherList.size() - 1);
-        assertThat(testTeacher.getFullnName()).isEqualTo(DEFAULT_FULLN_NAME);
+        assertThat(testTeacher.getFullName()).isEqualTo(DEFAULT_FULL_NAME);
         assertThat(testTeacher.getRank()).isEqualTo(DEFAULT_RANK);
     }
 
@@ -505,7 +505,7 @@ class TeacherResourceIT {
         Teacher partialUpdatedTeacher = new Teacher();
         partialUpdatedTeacher.setId(teacher.getId());
 
-        partialUpdatedTeacher.fullnName(UPDATED_FULLN_NAME).rank(UPDATED_RANK);
+        partialUpdatedTeacher.fullName(UPDATED_FULL_NAME).rank(UPDATED_RANK);
 
         restTeacherMockMvc
             .perform(
@@ -519,7 +519,7 @@ class TeacherResourceIT {
         List<Teacher> teacherList = teacherRepository.findAll();
         assertThat(teacherList).hasSize(databaseSizeBeforeUpdate);
         Teacher testTeacher = teacherList.get(teacherList.size() - 1);
-        assertThat(testTeacher.getFullnName()).isEqualTo(UPDATED_FULLN_NAME);
+        assertThat(testTeacher.getFullName()).isEqualTo(UPDATED_FULL_NAME);
         assertThat(testTeacher.getRank()).isEqualTo(UPDATED_RANK);
     }
 

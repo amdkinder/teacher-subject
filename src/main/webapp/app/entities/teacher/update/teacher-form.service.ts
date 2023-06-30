@@ -18,7 +18,7 @@ type TeacherFormDefaults = Pick<NewTeacher, 'id'>;
 
 type TeacherFormGroupContent = {
   id: FormControl<ITeacher['id'] | NewTeacher['id']>;
-  fullnName: FormControl<ITeacher['fullnName']>;
+  fullName: FormControl<ITeacher['fullName']>;
   rank: FormControl<ITeacher['rank']>;
   staff: FormControl<ITeacher['staff']>;
   spec: FormControl<ITeacher['spec']>;
@@ -41,7 +41,7 @@ export class TeacherFormService {
           validators: [Validators.required],
         }
       ),
-      fullnName: new FormControl(teacherRawValue.fullnName),
+      fullName: new FormControl(teacherRawValue.fullName),
       rank: new FormControl(teacherRawValue.rank),
       staff: new FormControl(teacherRawValue.staff),
       spec: new FormControl(teacherRawValue.spec),

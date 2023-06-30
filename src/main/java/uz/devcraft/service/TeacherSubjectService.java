@@ -110,8 +110,4 @@ public class TeacherSubjectService {
         teacherSubjectRepository.deleteById(id);
     }
 
-    public Integer calculateTeacherHours(Long teacherId) {
-        var result = teacherSubjectRepository.sumTeacherSubjectHours(teacherId);
-        return result;
-    }
 }

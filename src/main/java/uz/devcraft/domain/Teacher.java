@@ -23,8 +23,8 @@ public class Teacher implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "fulln_name")
-    private String fullnName;
+    @Column(name = "full_name")
+    private String fullName;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "rank")
@@ -51,17 +51,17 @@ public class Teacher implements Serializable {
         this.id = id;
     }
 
-    public String getFullnName() {
-        return this.fullnName;
+    public String getFullName() {
+        return this.fullName;
     }
 
-    public Teacher fullnName(String fullnName) {
-        this.setFullnName(fullnName);
+    public Teacher fullName(String fullName) {
+        this.setFullName(fullName);
         return this;
     }
 
-    public void setFullnName(String fullnName) {
-        this.fullnName = fullnName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public AcademicRank getRank() {
@@ -127,7 +127,7 @@ public class Teacher implements Serializable {
     public String toString() {
         return "Teacher{" +
             "id=" + getId() +
-            ", fullnName='" + getFullnName() + "'" +
+            ", fullName='" + getFullName() + "'" +
             ", rank='" + getRank() + "'" +
             "}";
     }

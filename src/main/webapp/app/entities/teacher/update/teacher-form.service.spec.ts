@@ -20,7 +20,7 @@ describe('Teacher Form Service', () => {
         expect(formGroup.controls).toEqual(
           expect.objectContaining({
             id: expect.any(Object),
-            fullnName: expect.any(Object),
+            fullName: expect.any(Object),
             rank: expect.any(Object),
             staff: expect.any(Object),
             spec: expect.any(Object),
@@ -34,7 +34,7 @@ describe('Teacher Form Service', () => {
         expect(formGroup.controls).toEqual(
           expect.objectContaining({
             id: expect.any(Object),
-            fullnName: expect.any(Object),
+            fullName: expect.any(Object),
             rank: expect.any(Object),
             staff: expect.any(Object),
             spec: expect.any(Object),

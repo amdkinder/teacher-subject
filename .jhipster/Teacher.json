@@ -5,7 +5,7 @@
   "entityTableName": "teacher",
   "fields": [
     {
-      "fieldName": "fullnName",
+      "fieldName": "fullName",
       "fieldType": "String"
     },
     {

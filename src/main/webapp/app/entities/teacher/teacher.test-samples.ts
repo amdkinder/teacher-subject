@@ -12,7 +12,7 @@ export const sampleWithPartialData: ITeacher = {
 
 export const sampleWithFullData: ITeacher = {
   id: 80701,
-  fullnName: 'Rover up Nihonium',
+  fullName: 'Rover up Nihonium',
   rank: 'HEAD_TEACHER',
 };
 

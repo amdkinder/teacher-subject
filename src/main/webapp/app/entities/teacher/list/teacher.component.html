@@ -40,9 +40,9 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="fullnName">
+          <th scope="col" jhiSortBy="fullName">
             <div class="d-flex">
-              <span jhiTranslate="teacherSubjectApp.teacher.fullnName">Fulln Name</span>
+              <span jhiTranslate="teacherSubjectApp.teacher.fullName">Full Name</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -72,7 +72,7 @@
           <td>
             <a [routerLink]="['/teacher', teacher.id, 'view']">{{ teacher.id }}</a>
           </td>
-          <td>{{ teacher.fullnName }}</td>
+          <td>{{ teacher.fullName }}</td>
           <td jhiTranslate="{{ 'teacherSubjectApp.AcademicRank.' + teacher.rank }}">{{ teacher.rank }}</td>
           <td>
             <div *ngIf="teacher.staff">

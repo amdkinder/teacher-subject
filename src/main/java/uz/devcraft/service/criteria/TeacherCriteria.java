@@ -41,7 +41,7 @@ public class TeacherCriteria implements Serializable, Criteria {
 
     private LongFilter id;
 
-    private StringFilter fullnName;
+    private StringFilter fullName;
 
     private AcademicRankFilter rank;
 
@@ -55,7 +55,7 @@ public class TeacherCriteria implements Serializable, Criteria {
 
     public TeacherCriteria(TeacherCriteria other) {
         this.id = other.id == null ? null : other.id.copy();
-        this.fullnName = other.fullnName == null ? null : other.fullnName.copy();
+        this.fullName = other.fullName == null ? null : other.fullName.copy();
         this.rank = other.rank == null ? null : other.rank.copy();
         this.staffId = other.staffId == null ? null : other.staffId.copy();
         this.specId = other.specId == null ? null : other.specId.copy();
@@ -82,19 +82,19 @@ public class TeacherCriteria implements Serializable, Criteria {
         this.id = id;
     }
 
-    public StringFilter getFullnName() {
-        return fullnName;
+    public StringFilter getFullName() {
+        return fullName;
     }
 
-    public StringFilter fullnName() {
-        if (fullnName == null) {
-            fullnName = new StringFilter();
+    public StringFilter fullName() {
+        if (fullName == null) {
+            fullName = new StringFilter();
         }
-        return fullnName;
+        return fullName;
     }
 
-    public void setFullnName(StringFilter fullnName) {
-        this.fullnName = fullnName;
+    public void setFullName(StringFilter fullName) {
+        this.fullName = fullName;
     }
 
     public AcademicRankFilter getRank() {
@@ -161,7 +161,7 @@ public class TeacherCriteria implements Serializable, Criteria {
         final TeacherCriteria that = (TeacherCriteria) o;
         return (
             Objects.equals(id, that.id) &&
-            Objects.equals(fullnName, that.fullnName) &&
+            Objects.equals(fullName, that.fullName) &&
             Objects.equals(rank, that.rank) &&
             Objects.equals(staffId, that.staffId) &&
             Objects.equals(specId, that.specId) &&
@@ -171,7 +171,7 @@ public class TeacherCriteria implements Serializable, Criteria {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, fullnName, rank, staffId, specId, distinct);
+        return Objects.hash(id, fullName, rank, staffId, specId, distinct);
     }
 
     // prettier-ignore
@@ -179,7 +179,7 @@ public class TeacherCriteria implements Serializable, Criteria {
     public String toString() {
         return "TeacherCriteria{" +
             (id != null ? "id=" + id + ", " : "") +
-            (fullnName != null ? "fullnName=" + fullnName + ", " : "") +
+            (fullName != null ? "fullName=" + fullName + ", " : "") +
             (rank != null ? "rank=" + rank + ", " : "") +
             (staffId != null ? "staffId=" + staffId + ", " : "") +
             (specId != null ? "specId=" + specId + ", " : "") +

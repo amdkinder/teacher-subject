@@ -20,10 +20,12 @@ public interface TeacherMapper extends EntityMapper<TeacherDTO, Teacher> {
     @Named("staffId")
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
+    @Mapping(target = "name", source = "name")
     StaffDTO toDtoStaffId(Staff staff);
 
     @Named("specId")
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
+    @Mapping(target = "name", source = "name")
     SpecDTO toDtoSpecId(Spec spec);
 }

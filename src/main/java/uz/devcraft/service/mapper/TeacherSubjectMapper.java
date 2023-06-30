@@ -20,10 +20,13 @@ public interface TeacherSubjectMapper extends EntityMapper<TeacherSubjectDTO, Te
     @Named("teacherId")
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
+    @Mapping(target = "fullName", source = "fullName")
     TeacherDTO toDtoTeacherId(Teacher teacher);
 
     @Named("subjectId")
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
+    @Mapping(target = "name", source = "name")
+    @Mapping(target = "hours", source = "hours")
     SubjectDTO toDtoSubjectId(Subject subject);
 }

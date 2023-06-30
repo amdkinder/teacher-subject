@@ -1,7 +1,7 @@
 
 
 entity Teacher {
-    fullnName String
+    fullName String
     rank AcademicRank
 }
 

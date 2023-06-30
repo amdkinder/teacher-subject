@@ -17,5 +17,6 @@ public interface SubjectMapper extends EntityMapper<SubjectDTO, Subject> {
     @Named("specId")
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
+    @Mapping(target = "name", source = "id")
     SpecDTO toDtoSpecId(Spec spec);
 }

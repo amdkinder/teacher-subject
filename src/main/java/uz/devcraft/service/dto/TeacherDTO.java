@@ -12,7 +12,7 @@ public class TeacherDTO implements Serializable {
 
     private Long id;
 
-    private String fullnName;
+    private String fullName;
 
     private AcademicRank rank;
 
@@ -28,12 +28,12 @@ public class TeacherDTO implements Serializable {
         this.id = id;
     }
 
-    public String getFullnName() {
-        return fullnName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullnName(String fullnName) {
-        this.fullnName = fullnName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public AcademicRank getRank() {
@@ -86,7 +86,7 @@ public class TeacherDTO implements Serializable {
     public String toString() {
         return "TeacherDTO{" +
             "id=" + getId() +
-            ", fullnName='" + getFullnName() + "'" +
+            ", fullName='" + getFullName() + "'" +
             ", rank='" + getRank() + "'" +
             ", staff=" + getStaff() +
             ", spec=" + getSpec() +
